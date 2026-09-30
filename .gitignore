@@ -28,3 +28,12 @@ dist-ssr
 .capture-check.cjs
 .make-gif.py
 desktop.png
+.vercel
+.radio-state-check.js
+.round-check.js
+.required-check.js
+.stretch-check.js
+.*-required.png
+.*-stretch.png
+.vercel
+.env*

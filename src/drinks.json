@@ -1,0 +1,16 @@
+{
+  "drinks": [
+    { "name": "Classic Lime Margarita", "ingredients": { "style": "classic", "flavor": "lime", "rim": "salt", "serve": "rocks" } },
+    { "name": "Spicy Mango Margarita", "ingredients": { "style": "spicy", "flavor": "mango", "rim": "chili-lime", "serve": "rocks" } },
+    { "name": "Frozen Strawberry Margarita", "ingredients": { "style": "classic", "flavor": "strawberry", "rim": "sugar", "serve": "frozen" } },
+    { "name": "Watermelon Tajin Margarita", "ingredients": { "style": "classic", "flavor": "watermelon", "rim": "tajin", "serve": "crushed-ice" } },
+    { "name": "Skinny Lime Margarita", "ingredients": { "style": "skinny", "flavor": "lime", "rim": "half-salt", "serve": "rocks" } },
+    { "name": "Smoky Peach Margarita", "ingredients": { "style": "smoky", "flavor": "peach", "rim": "salt", "serve": "rocks" } },
+    { "name": "Passionfruit Margarita", "ingredients": { "style": "classic", "flavor": "passionfruit", "rim": "sugar", "serve": "straight-up" } },
+    { "name": "Sparkling Strawberry Margarita", "ingredients": { "style": "sparkling", "flavor": "strawberry", "rim": "none", "serve": "rocks" } },
+    { "name": "Frozen Mango Margarita", "ingredients": { "style": "classic", "flavor": "mango", "rim": "tajin", "serve": "frozen" } },
+    { "name": "Spicy Watermelon Margarita", "ingredients": { "style": "spicy", "flavor": "watermelon", "rim": "chili-lime", "serve": "crushed-ice" } },
+    { "name": "Peach Margarita", "ingredients": { "style": "classic", "flavor": "peach", "rim": "sugar", "serve": "rocks" } },
+    { "name": "Chili-Lime Passionfruit Margarita", "ingredients": { "style": "spicy", "flavor": "passionfruit", "rim": "chili-lime", "serve": "rocks" } }
+  ]
+}

@@ -1,0 +1,8 @@
+brain-and-space
+tmp
+.capture
+*.png
+*.gif
+.*-check.js
+src/data.js
+src/components/Card.jsx
