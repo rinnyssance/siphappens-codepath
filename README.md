@@ -1,89 +1,78 @@
-# Web Development Project 1 - *757 Create & Connect*
+# Sip Happens
 
-Submitted by: **Erin Joel Moore**
+**Sip Happens** is my version of CodePath WEB102's Unit 3 React forms lab. The original assignment is a barista drink guessing game, and I changed the theme into a margarita recipe guessing game while keeping the React concepts and required functionality from the lesson.
 
-This web app: **A creative and technology community board for Hampton Roads featuring ten clearly labeled fictional event concepts and related learning resources.**
+## What the App Does
 
-Time spent: **10** hours spent in total
+The app generates a random margarita and asks the player to identify four parts of its recipe: style, flavor, rim, and how it is served. The player makes a guess for each category and checks the answers against the recipe. Each category changes visually to show whether the guess was correct or incorrect, and the player can generate another random drink to try again.
+
+The finished version uses text inputs. The valid choices stay visible below each field. Guesses ignore capitalization and surrounding spaces, but must match one of the listed choices. Incorrect guesses do not reveal the answer. The 12 recipes are the game's definitions, rather than a claim that each drink has only one possible recipe.
+
+## Why I Made It
+
+I wanted to practice the React concepts from this unit while making the assignment feel more like my own project. Changing the theme helped me think about how the same React structure can be reused for a different idea.
+
+While building this project, I practiced:
+
+- React state
+- Controlled form inputs
+- Reusable components
+- Props
+- Event handlers
+- Rendering data from JSON
+- Conditional CSS classes
+- Flexbox and responsive CSS
 
 ## Required Features
 
-The following **required** functionality is completed:
+- [x] Displays one random drink at a time
+- [x] Provides one choice per recipe category
+- [x] Allows the user to select one option from each category
+- [x] Checks guesses against the recipe
+- [x] Visually identifies correct and incorrect guesses
+- [x] Generates a random drink and resets the form
 
-- [x] **The app has a cohesive, unique theme for events or resources relevant to a specific community**
-  - [x] Header/title describing the theme is displayed
-- [x] **At least 10 unique events or resources are displayed in a responsive card format**
-  - [x] There are at least 10 cards displayed for 10 different events
-  - [x] The cards should be displayed in an organized format (ex. a grid, or in one line)
-  - [x] Each card should include some information about the event or resource
+The required radio-button version is saved in commit `e36edf6` (Complete Sip Happens margarita quiz). The stretch version replaces the radio buttons with text fields while keeping the same parent state and checking behavior. Random selection can occasionally pick the same drink again.
 
-The following **optional** features are implemented:
+## Stretch Features
 
-- [x] Buttons or links to a related resources are on each card component
-  - [x] All cards have buttons or links in addition to text
-- [x] The site is responsive for both desktop and mobile formats
-  - [x] Web app is shown in a mobile format
-  - [ ] **Video Walkthrough Special Instructions**: To ease the grading process, please use Chrome Developer Tools' "Toggle Device" button to demonstrate that your web application's responsiveness in both a desktop *and* a mobile format. Detailed instructions can be found below this stretch feature on the project page.
+- [x] Users can type guesses instead of selecting radio buttons
+- [x] Typed guesses are validated against the available choices
 
-The following **additional** features are implemented:
+## Technologies
 
-* [x] Category filters and an updating opportunity count.
-* [x] Accessible filter states, keyboard focus styles, skip link, and reduced-motion support.
-* [x] Custom coastal illustrations and footer links to CodePath and Rinnyssance's GitHub.
-* [x] Clear fictional-event labels and a site-wide explanation.
+- React
+- JavaScript
+- Vite
+- CSS
+- JSON
 
-## Video Walkthrough
+## Running the Project
 
-Here's a walkthrough of implemented required features:
-
-![Walkthrough of 757 Create & Connect](public/walkthrough.gif)
-
-GIF created with browser screenshots and Pillow. It shows all ten cards, category filtering, and desktop and mobile layouts. The Chrome DevTools Toggle Device button demonstration remains to be recorded for the specific optional instruction above.
-
-## Notes
-
-This project helps people explore creative and technology interests around Hampton Roads. The ten events are fictional examples; their links lead to related learning resources.
-
-- **src/App.jsx** builds the main page: the header, welcome section, example-event notice, category filters, card grid, and footer. It tracks the selected category and updates the displayed cards and opportunity count.
-- **src/components/Card.jsx** is the reusable event card. It displays an illustration, category, title, description, concept location, and resource link from the event information it receives.
-- **src/data.js** stores the ten event concepts, including their categories, descriptions, cities, colors, and links. Keeping this information in one place makes it easier to add or edit cards.
-- **src/App.css** styles the page, illustrations, buttons, and cards. Its media queries change the card grid from three columns to two and then one as the screen narrows.
-- **src/index.css** supplies the site's shared font, background, box sizing, and smooth scrolling.
-- **src/main.jsx** starts React and renders the app inside the root element.
-- **index.html** provides that root element, the browser tab title, and page metadata.
-- **package.json** lists dependencies and commands for starting the app, building it, and checking the code.
-- **package-lock.json** records exact dependency versions for consistent installs.
-- **vite.config.js** configures Vite and its React plugin.
-- **postcss.config.js** keeps CSS processing local to this project so unrelated parent-folder settings do not interfere.
-- **.oxlintrc.json** configures the JavaScript and React code checks.
-- **.gitignore** keeps generated files, dependencies, and local settings out of the repository.
-- **public/walkthrough.gif** shows the working project at desktop and mobile sizes.
-- **README.md** documents the project, completed features, setup, and walkthrough.
-
-Run locally with Node.js 22.12+:
-
-```sh
+```bash
 npm install
 npm run dev
 ```
 
-Production check: `npm run build`. Code check: `npm run lint`.
+To check the production build and lint the code:
 
-## License
+```bash
+npm run build
+npm run lint
+```
 
-    Copyright 2026 Erin Joel Moore
+## Code Organization
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+- `src/App.jsx` renders the header, game, and footer.
+- `src/components/BaristaForm.jsx` owns the guesses, random drink, validation, and four correctness states.
+- `src/components/RecipeChoices.jsx` renders a reusable controlled input and the valid choices passed through props.
+- `src/drinks.json` contains the 12 game recipes.
+- `src/App.css` contains the color palette and responsive Flexbox layout.
 
-        http://www.apache.org/licenses/LICENSE-2.0
+## Verification
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+I checked the radio-button version before adding the stretch feature. Browser checks covered independent selections, answer displays, correct and incorrect guesses, retries, and resets. For typed guesses, I checked empty fields, invalid choices, capitalization, surrounding spaces, and valid answers. Both versions were checked at desktop, tablet, and mobile widths without horizontal scrolling or browser errors.
 
+## Walkthrough
 
-
+GIF/video coming soon.
