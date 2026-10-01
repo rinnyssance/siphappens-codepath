@@ -37,3 +37,4 @@ desktop.png
 .*-stretch.png
 .vercel
 .env*
+/tmp/

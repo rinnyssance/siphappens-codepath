@@ -40,6 +40,8 @@ h1 { font-family: 'Bowlby One SC', sans-serif; font-size: clamp(42px, 6vw, 78px)
 .shake { background: var(--coral); color: var(--dark); border: 1px solid var(--dark); border-radius: 30px; padding: 15px 50px; box-shadow: 3px 3px 0 var(--dark); font-weight: 700; font-size: 17px; }
 .shake:hover { background: var(--orange); }
 .result { min-height: 24px; margin: 16px 0 0; font-size: 14px; }
+.result:empty { min-height: 0; margin: 0; }
+footer a { color: inherit; text-underline-offset: 3px; }
 .input-label { display: block; font-size: 12px; margin-bottom: 7px; }
 .typed-choices input { width: 100%; min-width: 0; padding: 12px 10px; border: 1px solid #b99882; border-radius: 7px; background: white; color: var(--dark); font-size: 16px; }
 .typed-choices input[aria-invalid="true"] { border: 2px solid #a2302a; }

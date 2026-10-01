@@ -80,7 +80,7 @@ export default function BaristaForm() {
     </div>
     <div className="actions">
       <button className="shake" type="button" onClick={onCheckAnswer}>Shake It! 🍹</button>
-      <p className="result" role="status">{checkedAll ? (perfect ? 'Perfect pour! 🍹' : 'Almost! Give it another shake.') : 'A little intuition. A little trial and lime.'}</p>
+      <p className="result" role="status">{checkedAll ? (perfect ? 'Perfect pour! 🍹' : 'Almost! Give it another shake.') : ''}</p>
     </div>
   </section>;
 }

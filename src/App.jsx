@@ -2,7 +2,6 @@ import BaristaForm from './components/BaristaForm';
 import './App.css';
 export default function App() {
   return <div className="app-shell">
-    <header className="site-header"><span>A LITTLE LIME. A LITTLE GUESSWORK.</span><b aria-hidden="true">✳</b><span>THE MARGARITA RECIPE GAME</span></header>
     <main>
       <section className="hero" aria-labelledby="title">
         <div className="citrus" aria-hidden="true"><span /></div>
@@ -11,6 +10,6 @@ export default function App() {
       </section>
       <BaristaForm />
     </main>
-    <footer><span>SIP HAPPENS ✳ MADE WITH A TWIST</span><span>A React forms lab · CodePath WEB102</span></footer>
+    <footer><span>Made with a twist by <a href="https://github.com/rinnyssance">Rinnyssance</a></span><span>A React forms lab · CodePath WEB102</span></footer>
   </div>;
 }
